@@ -30,6 +30,7 @@ namespace TddTaskManagement.Application.Tests.Services
         [Theory]
         [InlineData("")]
         [InlineData(" ")]
+        [InlineData(null)]
         public void Create_ShouldThrowException_WhenInvalidInputsProvided(string title)
         {
             //arrange

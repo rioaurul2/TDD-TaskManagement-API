@@ -4,7 +4,7 @@ namespace TddTaskManagement.Application.Services
 {
     public class TaskService
     {
-        public TaskDto Create(TaskDto dto)
+        public Domain.Models.Task Create(TaskDto dto)
         {
             ArgumentNullException.ThrowIfNull(dto);
 
@@ -18,10 +18,7 @@ namespace TddTaskManagement.Application.Services
                 throw new ArgumentException("The field is missing", nameof(dto.Title));
             }
 
-            var createdTask = new TaskDto
-            {
-                Title = dto.Title,
-            };
+            var createdTask = new Domain.Models.Task(dto.Title);
 
             return createdTask;
         }

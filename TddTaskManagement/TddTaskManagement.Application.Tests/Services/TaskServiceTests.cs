@@ -21,7 +21,6 @@ namespace TddTaskManagement.Application.Tests.Services
 
             //assert
             Assert.Equal(taskDto.Title, task.Title);
-            Assert.NotSame(taskDto, task);
         }
 
         [Fact]
